@@ -8,12 +8,12 @@ h2. Plugin requirements
 oui_player's minimum requirements:
 
 * "Textpattern CMS":http://textpattern.com/ 4.6+.
-* "oui_player":https://github.com/oui-textpattern/oui_player/ 2.+.
+* "oui_player":https://github.com/oui-textpattern/oui_player/ 2+.
 
 h2. Recognised values for the @play@ attribute
 
-* *ID* (using @youtube@ as provider.)
-* list=[*list_ID*]
+* *ID* (using @youtube@ as provider)
+* list=[*list_ID*] (using @youtube@ as provider)
 * http(s)://(www.)youtu.be/[*ID*]
 * http(s)://(www.)youtube.com/v/[*ID*]
 * http(s)://(www.)youtube.com/watch?v=[*ID*](&list=[*list_ID*])
