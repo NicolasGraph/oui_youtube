@@ -1,8 +1,8 @@
 #Default language, en-us, en-gb
 #@admin
 oui_player_provider_youtube => Youtube
-oui_player_youtube => Youtube player (oui_player_youtube)
-oui_player_youtube_prefs => Display the Youtube player prefs
+oui_player_youtube => Youtube player
+oui_player_youtube_prefs => Display the Youtube player preferences
 oui_player_youtube_no_cookie => Use the cookie free service
 oui_player_youtube_autohide =>  Player commands display while playing
 oui_player_youtube_autohide_0 => Commands and progress bar always visible

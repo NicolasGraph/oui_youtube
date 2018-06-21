@@ -1,7 +1,7 @@
 #@language fr-fr
 #@admin
 oui_player_provider_youtube => Youtube
-oui_player_youtube => Lecteur Youtube (oui_player_youtube)
+oui_player_youtube => Lecteur Youtube
 oui_player_youtube_prefs => Afficher les préférences du lecteur Youtube
 oui_player_youtube_width => Largeur du lecteur
 oui_player_youtube_height => Hauteur du lecteur
