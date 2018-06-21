@@ -129,55 +129,9 @@ namespace Oui\Player {
                 ),
             );
 
-            /**
-             * Sets the current media(s) infos.
-             *
-             * @return array The current media(s) infos.
-             */
-
-            public function setInfos($fallback = false)
+            protected function resetGlue($play)
             {
-                $this->infos = array();
-
-                foreach ($this->getPlay() as $play) {
-                    $notId = preg_match('/([.][a-z]+)/', $play); // URL or filename.
-
-                    if ($notId) {
-                        $glue = null;
-
-                        foreach (self::getPatterns() as $pattern => $options) {
-                            if (preg_match($options['scheme'], $play, $matches)) {
-                                $prefix = isset($options['prefix']) ? $options['prefix'] : '';
-
-                                if (!array_key_exists($play, $this->infos)) {
-                                    $this->infos[$play] = array(
-                                        'play' => $prefix . $matches[$options['id']],
-                                        'type' => $pattern,
-                                    );
-
-                                    // Bandcamp and Youtube accept multiple matches.
-                                    if (!isset($options['glue'])) {
-                                        break;
-                                    } else {
-                                        $glue = $options['glue'];
-                                    }
-                                } else {
-                                    $this->infos[$play]['play'] .= $glue . $prefix . $matches[$options['id']];
-                                    $this->infos[$play]['type'] = $pattern;
-                                }
-                            }
-                        }
-                    } elseif ($fallback) {
-                        $this->infos[$play] = array(
-                            'play' => $play,
-                            'type' => preg_match('#^(list)=#', $play) ? 'list' : 'video',
-                        );
-                    }
-
-                    self::setGlue(0, $this->infos[$play]['type'] === 'list' ? 'embed?' : 'embed/');
-                }
-
-                return $this;
+                self::setGlue(0, $this->infos[$play]['type'] === 'list' ? 'embed?' : 'embed/');
             }
         }
 
