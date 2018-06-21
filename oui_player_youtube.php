@@ -134,6 +134,15 @@ namespace Oui\Player {
                 self::setGlue(0, $this->infos[$play]['type'] === 'list' ? 'embed?' : 'embed/');
             }
         }
+    }
+}
 
+namespace {
+    function oui_youtube($atts) {
+        return oui_player(array_merge(array('provider' => 'youtube'), $atts));
+    }
+
+    function oui_if_youtube($atts, $thing) {
+        return oui_if_player(array_merge(array('provider' => 'youtube'), $atts), $thing);
     }
 }
