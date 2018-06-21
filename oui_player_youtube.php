@@ -135,6 +135,5 @@ namespace Oui\Player {
             }
         }
 
-        register_callback('Oui\Player\Youtube::getProvider', 'oui_player', 'plug_providers');
     }
 }
