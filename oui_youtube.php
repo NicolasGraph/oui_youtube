@@ -1,11 +1,11 @@
 <?php
 
 /*
- * This file is part of oui_player_youtube,
+ * This file is part of oui_youtube,
  * a oui_player v2+ extension to easily embed
  * YouTube customizable video players in Textpattern CMS.
  *
- * https://github.com/NicolasGraph/oui_player_youtube
+ * https://github.com/NicolasGraph/oui_youtube
  *
  * Copyright (C) 2018 Nicolas Morand
  *

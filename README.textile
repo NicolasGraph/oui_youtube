@@ -1,18 +1,18 @@
-h1. oui_player_youtube
+h1. oui_youtube
 
 h2. Introduction
 
-"oui_player_youtube":https://github.com/NicolasGraph/oui_player_youtube is a "oui_player":https://github.com/NicolasGraph/oui_player v2+ extension to easily embed "YouTube":https://youtube.com/ provided videos in "Textpattern":https://textpattern.com/ powered websites.
+"oui_youtube":https://github.com/NicolasGraph/oui_youtube is a "oui_player":https://github.com/NicolasGraph/oui_player v2+ extension to easily embed "YouTube":https://youtube.com/ provided videos in "Textpattern":https://textpattern.com/ powered websites.
 
 The above platform serves cookies with its player, according to the EU legislation, you should warn your users about these cookies before they are added. This can be done by using "oui_cookie":https://github.com/NicolasGraph/oui_cookie.
 
 h3. Plugin requirements
 
-oui_player_youtube's minimum requirements:
+oui_youtube's minimum requirements:
 
 * "Textpattern CMS":http://textpattern.com/ v4.6+;
 * "oui_player":https://github.com/NicolasGraph/oui_player v2+;
-* "oui_player_provider":https://github.com/NicolasGraph/oui_player_proivider v1+.
+* "oui_player_provider":https://github.com/NicolasGraph/oui_player_provider v1+.
 
 h2. Plugin management
 
@@ -20,7 +20,7 @@ h3. Installation
 
 h4. From the admin interface
 
-# "Download":https://github.com/NicolasGraph/oui_player_youtube/releases the compiled plugin file or the source to compile a customized file.
+# "Download":https://github.com/NicolasGraph/oui_youtube/releases the compiled plugin file or the source to compile a customized file.
 # Paste the content of the compiled plugin file under the "Admin > Plugins":?event=plugin tab and click the _Upload_ button.
 # Confirm the plugin install by clicking the _Install_ button on the plugin preview page.
 # Enable the plugin and click the _Options_ link (or visit the _Preferences_ tab) to set the provider preferences.
@@ -33,8 +33,8 @@ After "installing Composer":https://getcomposer.org/doc/00-intro.md…
 @$ cd /path/to/your/textpattern/installation/dir@
 # If it's not already done, lock your version of Txp:
 @$ composer require textpattern/lock:4.6.2@, where @4.6.2@ is the Txp version in use.
-# Install oui_player_youtube:
-@$ composer require oui/oui_player_youtube@
+# Install oui_youtube:
+@$ composer require oui/oui_youtube@
 
 h3. Update
 
@@ -44,7 +44,7 @@ h4. From the admin interface
 
 h4. Via Composer
 
-bc. $ composer update oui/oui_player_youtube
+bc. $ composer update oui/oui_youtube
 
 h3. Uninstall
 
@@ -56,7 +56,7 @@ h4. From the admin interface
 
 h4. Via Composer
 
-bc. $ composer remove oui/oui_player_youtube
+bc. $ composer remove oui/oui_youtube
 
 h2. Tags and parameters
 
@@ -216,11 +216,11 @@ h3. License
 
 This plugin is distributed under "GPL v2.0":https://www.gnu.org/licenses/gpl-2.0.txt.
 
-oui_player_youtube version 1.0.0, Copyright (C) 2018 Nicolas Morand
+oui_youtube version 1.0.0, Copyright (C) 2018 Nicolas Morand
 This Textpattern plugin comes with ABSOLUTELY "NO WARRANTY":https://www.gnu.org/licenses/gpl-2.0.html#section11.
 This is free software, and you are welcome to redistribute it "under certain conditions":https://www.gnu.org/licenses/gpl-2.0.html#SEC3.
 
 h3. Changelog
 
-* *oui_player_youtube v1.0.0-beta* (2018-06-24)
+* *oui_youtube v1.0.0-beta* (2018-06-24)
 * *oui_player v1.3.0* (2017-05-24)
