@@ -223,4 +223,5 @@ This is free software, and you are welcome to redistribute it "under certain con
 h3. Changelog
 
 * *oui_youtube v1.0.0-BETA1* (2018-06-26)
+** Added: `list` support.
 * *oui_player v1.3.0* (2017-05-24)
