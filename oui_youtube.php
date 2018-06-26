@@ -49,6 +49,17 @@ namespace Oui\Player {
             );
             protected static $src = '//www.youtube-nocookie.com/';
             protected static $glue = array('embed/', '?', '&amp;');
+            protected static $dims = array(
+                'width'     => array(
+                    'default' => '560',
+                ),
+                'height'    => array(
+                    'default' => '315',
+                ),
+                'ratio'     => array(
+                    'default' => '',
+                ),
+            );
             protected static $params = array(
                 'autohide'       => array(
                     'default' => '2',
