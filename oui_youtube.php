@@ -50,15 +50,9 @@ namespace Oui {
             protected static $src = '//www.youtube-nocookie.com/';
             protected static $glue = array('embed/', '?', '&amp;');
             protected static $dims = array(
-                'width'     => array(
-                    'default' => '560',
-                ),
-                'height'    => array(
-                    'default' => '315',
-                ),
-                'ratio'     => array(
-                    'default' => '',
-                ),
+                'width'  => '560',
+                'height' => '315',
+                'ratio'  => '',
             );
             protected static $params = array(
                 'autohide'       => array(
@@ -97,9 +91,7 @@ namespace Oui {
                     'default' => '1',
                     'valid'   => array('0', '1'),
                 ),
-                'hl'             => array(
-                    'default' => '',
-                ),
+                'hl'             => '',
                 'iv_load_policy' => array(
                     'default' => '1',
                     'valid'   => array('1', '3'),
@@ -120,9 +112,7 @@ namespace Oui {
                     'default' => '',
                     'valid'   => 'url',
                 ),
-                'playlist'    => array(
-                    'default' => '',
-                ),
+                'playlist'    => '',
                 'playsinline'    => array(
                     'default' => '0',
                     'valid'   => array('0', '1'),
