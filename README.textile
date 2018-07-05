@@ -105,6 +105,8 @@ The related preference is a generic oui_player preference; it is applied to all 
 
 h5. Parameters
 
+From Txp 4.7, paramaters accepting @0@ or @1@ as valid values can also be enabling through boolean/valueless attributes.
+
 - @autohide@ :=
 @0@, @1@ or @2@; initially set to @2@.
 Indicates whether the video controls will automatically hide after a video begins playing.
