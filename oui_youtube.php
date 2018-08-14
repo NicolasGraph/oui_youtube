@@ -29,115 +29,116 @@
  * @package Oui\Player
  */
 
-namespace Oui {
+namespace Oui;
 
-    if (class_exists('Oui\Provider')) {
+if (class_exists('Oui\Provider')) {
 
-        class Youtube extends Provider
+    class Youtube extends Provider
+    {
+        protected static $srcBase = '//www.youtube-nocookie.com/';
+        protected static $srcGlue = array('embed/', '?', '&amp;');
+        protected static $iniDims = array(
+            'width'  => '560',
+            'height' => '315',
+            'ratio'  => '',
+        );
+        protected static $iniParams = array(
+            'autohide'       => array(
+                'default' => '2',
+                'valid'   => array('0', '1', '2'),
+            ),
+            'autoplay'       => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'cc_load_policy' => array(
+                'default' => '1',
+                'valid'   => array('0', '1'),
+            ),
+            'color'          => array(
+                'default' => 'red',
+                'valid'   => array('red', 'white'),
+            ),
+            'controls'       => array(
+                'default' => '1',
+                'valid'   => array('0', '1', '2'),
+            ),
+            'disablekb'      => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'enablejsapi'    => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'end'            => array(
+                'default' => '',
+                'valid'   => 'number',
+            ),
+            'fs'             => array(
+                'default' => '1',
+                'valid'   => array('0', '1'),
+            ),
+            'hl'             => '',
+            'iv_load_policy' => array(
+                'default' => '1',
+                'valid'   => array('1', '3'),
+            ),
+            'listType'       => array(
+                'default' => '',
+                'valid'   => array('playlist', 'search', 'user_uploads'),
+            ),
+            'loop'           => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'modestbranding' => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'origin'         => array(
+                'default' => '',
+                'valid'   => 'url',
+            ),
+            'playlist'    => '',
+            'playsinline'    => array(
+                'default' => '0',
+                'valid'   => array('0', '1'),
+            ),
+            'rel'            => array(
+                'default' => '1',
+                'valid'   => array('0', '1'),
+            ),
+            'start'          => array(
+                'default' => '0',
+                'valid'   => 'number',
+            ),
+            'showinfo'       => array(
+                'default' => '1',
+                'valid'   => array('0', '1'),
+            ),
+            'theme'          => array(
+                'default' => 'dark',
+                'valid'   => array('dark', 'light'),
+            ),
+        );
+        protected static $mediaPatterns = array(
+            'video' => array(
+                'scheme' => '#^https?://(www\.)?(youtube\.com/(watch\?v=|embed/|v/)|youtu\.be/)(([^&?/]+)?)#i',
+                'id'     => '4',
+                'glue'   => '&amp;',
+            ),
+            'list'  => array(
+                'scheme' => '#^https?://(www\.)?(youtube\.com/(watch\?v=|embed/|v/)|youtu\.be/)[\S]+list=([^&?/]+)?#i',
+                'id'     => '4',
+                'prefix' => 'list=',
+            ),
+        );
+
+        protected function resetSrcGlue($media)
         {
-            protected static $patterns = array(
-                'video' => array(
-                    'scheme' => '#^(http|https)://(www\.)?(youtube\.com/(watch\?v=|embed/|v/)|youtu\.be/)(([^&?/]+)?)#i',
-                    'id'     => '5',
-                    'glue'   => '&amp;',
-                ),
-                'list'  => array(
-                    'scheme' => '#^(http|https)://(www\.)?(youtube\.com/(watch\?v=|embed/|v/)|youtu\.be/)[\S]+list=([^&?/]+)?#i',
-                    'id'     => '5',
-                    'prefix' => 'list=',
-                ),
-            );
-            protected static $src = '//www.youtube-nocookie.com/';
-            protected static $glue = array('embed/', '?', '&amp;');
-            protected static $dims = array(
-                'width'  => '560',
-                'height' => '315',
-                'ratio'  => '',
-            );
-            protected static $params = array(
-                'autohide'       => array(
-                    'default' => '2',
-                    'valid'   => array('0', '1', '2'),
-                ),
-                'autoplay'       => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'cc_load_policy' => array(
-                    'default' => '1',
-                    'valid'   => array('0', '1'),
-                ),
-                'color'          => array(
-                    'default' => 'red',
-                    'valid'   => array('red', 'white'),
-                ),
-                'controls'       => array(
-                    'default' => '1',
-                    'valid'   => array('0', '1', '2'),
-                ),
-                'disablekb'      => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'enablejsapi'    => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'end'            => array(
-                    'default' => '',
-                    'valid'   => 'number',
-                ),
-                'fs'             => array(
-                    'default' => '1',
-                    'valid'   => array('0', '1'),
-                ),
-                'hl'             => '',
-                'iv_load_policy' => array(
-                    'default' => '1',
-                    'valid'   => array('1', '3'),
-                ),
-                'listType'           => array(
-                    'default' => '',
-                    'valid'   => array('playlist', 'search', 'user_uploads'),
-                ),
-                'loop'           => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'modestbranding' => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'origin'    => array(
-                    'default' => '',
-                    'valid'   => 'url',
-                ),
-                'playlist'    => '',
-                'playsinline'    => array(
-                    'default' => '0',
-                    'valid'   => array('0', '1'),
-                ),
-                'rel'            => array(
-                    'default' => '1',
-                    'valid'   => array('0', '1'),
-                ),
-                'start'          => array(
-                    'default' => '0',
-                    'valid'   => 'number',
-                ),
-                'showinfo'       => array(
-                    'default' => '1',
-                    'valid'   => array('0', '1'),
-                ),
-                'theme'          => array(
-                    'default' => 'dark',
-                    'valid'   => array('dark', 'light'),
-                ),
-            );
-
-            protected function resetGlue($play)
-            {
-                self::setGlue(0, $this->infos[$play]['type'] === 'list' ? 'embed?' : 'embed/');
+            if (isset($this->mediaInfos[$media]['pattern'])) {
+                self::setSrcGlue(0, $this->mediaInfos[$media]['pattern'] === 'list' ? 'embed?' : 'embed/');
             }
         }
     }
