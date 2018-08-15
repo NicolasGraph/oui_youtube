@@ -43,3 +43,4 @@ oui_player_youtube_theme_light => Light
 oui_player_youtube_width => Player width
 oui_player_youtube_height => Player height
 oui_player_youtube_ratio => Player ratio by default
+oui_player_youtube_responsive => Render responsive players from the provided dimensions

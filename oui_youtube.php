@@ -38,9 +38,13 @@ if (class_exists('Oui\Provider')) {
         protected static $srcBase = '//www.youtube-nocookie.com/';
         protected static $srcGlue = array('embed/', '?', '&amp;');
         protected static $iniDims = array(
-            'width'  => '560',
-            'height' => '315',
-            'ratio'  => '',
+            'width'      => '560',
+            'height'     => '315',
+            'ratio'      => '',
+            'responsive' => array(
+                'default' => 'false',
+                'valid'   => array('true', 'false'),
+            ),
         );
         protected static $iniParams = array(
             'autohide'       => array(

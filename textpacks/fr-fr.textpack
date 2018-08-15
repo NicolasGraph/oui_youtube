@@ -6,6 +6,7 @@ oui_player_youtube_prefs => Afficher les préférences du lecteur Youtube
 oui_player_youtube_width => Largeur du lecteur
 oui_player_youtube_height => Hauteur du lecteur
 oui_player_youtube_ratio => Ratio utilisé en l'absence de l'une des dimensions
+oui_player_youtube_responsive => Rendre les lecteurs adaptatifs à partir des dimensions fournies
 oui_player_youtube_no_cookie => Utiliser la version sans cookie
 oui_player_youtube_autohide => Affichage des commandes pendant la lecture
 oui_player_youtube_autohide_0 => Commandes et état du chargement toujours visibles
