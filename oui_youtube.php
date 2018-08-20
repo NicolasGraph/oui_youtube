@@ -33,8 +33,11 @@ namespace Oui;
 
 if (class_exists('Oui\Player\Provider')) {
 
-    class Youtube extends Player\Provider
+    class Youtube extends Player\Oembed
     {
+        protected static $endPoint = 'https://www.youtube.com/oembed?url=';
+        protected static $URLBase = 'https://www.youtube.com/';
+
         protected static $srcBase = '//www.youtube-nocookie.com/';
         protected static $srcGlue = array('embed/', '?', '&amp;');
         protected static $iniDims = array(
